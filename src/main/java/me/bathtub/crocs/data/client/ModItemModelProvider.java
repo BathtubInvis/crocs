@@ -14,7 +14,10 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
+        withExistingParent("crocium_ore", modLoc("block/crocium_ore"));
 
+        builder(itemGenerated, "crocium_ingot");
     }
 
     public ItemModelBuilder builder(ModelFile itemGenerated, String name) {

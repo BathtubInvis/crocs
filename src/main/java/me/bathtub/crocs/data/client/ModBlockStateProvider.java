@@ -13,6 +13,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        //simpleBlock(BlockInit.CROCIUM_ORE.get());
+        simpleBlock(BlockInit.CROCIUM_ORE.get());
     }
 }

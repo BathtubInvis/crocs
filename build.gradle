@@ -12,7 +12,7 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle'
 
 group = 'me.bathTub.crocs'
-version = '1.1.0A-CROC'
+version = '1.1.0B-CROC'
 archivesBaseName = 'crocs'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'

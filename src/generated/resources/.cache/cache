@@ -1,3 +1,7 @@
+6ff5971f216fda587f5675df8dc4086b5e63f2a4 assets/crocs/blockstates/crocium_ore.json
+b9be494ccea4c59eb1218f5fef799dd8e4058ec8 assets/crocs/models/block/crocium_ore.json
+1390725b936faf7d5476f4e83209f9e747658358 assets/crocs/models/item/crocium_ingot.json
+1398605acdb8930bd26a29c6ef4a9f6601b32621 assets/crocs/models/item/crocium_ore.json
 af9cd5267172d3e2201a395aa5d9e81f79672285 data/crocs/advancements/recipes/materials/crocium_ingot_blasting.json
 e76be15d8deeb74c6fa55c78a408a7253722ba20 data/crocs/advancements/recipes/materials/crocium_ingot_smelting.json
 ac28f9e13a01a2c5dda56a4adaf3b856f6e65e79 data/crocs/advancements/recipes/materials/crocium_pickaxe.json
