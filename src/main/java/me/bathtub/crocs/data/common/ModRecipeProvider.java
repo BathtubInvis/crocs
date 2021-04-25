@@ -14,6 +14,8 @@ public class ModRecipeProvider extends RecipeProvider {
     public ModRecipeProvider(DataGenerator generatorIn) {
         super(generatorIn);
     }
+
+    //it didn't commit so i added this line
     @Override
     protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
         CookingRecipeBuilder.smeltingRecipe(getIngredientFromItem(ItemInit.CROCIUM_ORE.get()), ItemInit.CROCIUM_INGOT.get(), 0.7f, 200)
