@@ -2,9 +2,11 @@ package me.bathtub.crocs;
 
 import me.bathtub.crocs.registry.Registry;
 import me.bathtub.crocs.registry.item.ItemInit;
+import me.bathtub.crocs.world.oreGen.OreGen;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -26,6 +28,7 @@ public class Crocs {
 
         Registry.register(bus);
 
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, OreGen::generateOres);
         MinecraftForge.EVENT_BUS.register(this);
     }
 
