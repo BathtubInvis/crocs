@@ -10,12 +10,18 @@ import net.minecraft.potion.Effects;
 import net.minecraft.world.World;
 
 public class CrocsArmor extends ArmorItem {
+    private static int healthBuffer = 0;
+
     public CrocsArmor(IArmorMaterial materialIn, EquipmentSlotType slot, Properties builderIn) {
         super(materialIn, slot, builderIn);
     }
 
     @Override
     public void onArmorTick(ItemStack stack, World world, PlayerEntity player) {
-        player.addPotionEffect(new EffectInstance(Effects.REGENERATION, 15, 4));
+        healthBuffer++;
+        if (healthBuffer >= 1200) {
+            healthBuffer = 0;
+            player.addPotionEffect(new EffectInstance(Effects.REGENERATION, 60, 255));
+        }
     }
 }
