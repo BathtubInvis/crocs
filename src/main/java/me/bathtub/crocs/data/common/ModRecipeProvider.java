@@ -5,6 +5,7 @@ import me.bathtub.crocs.registry.amor.ArmorInit;
 import me.bathtub.crocs.registry.item.ItemInit;
 import net.minecraft.data.*;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.ResourceLocation;
 
@@ -25,6 +26,14 @@ public class ModRecipeProvider extends RecipeProvider {
                 .addCriterion("has_item", hasItem(ItemInit.CROCIUM_ORE.get()))
                 .build(consumer, recipeID("crocium_ingot_blasting"));
 
+        ShapedRecipeBuilder.shapedRecipe(ItemInit.CROCIUM_PICKAXE.get(), 1)
+                .patternLine("###")
+                .patternLine(" s ")
+                .patternLine(" s ")
+                .key('#', ItemInit.CROCIUM_INGOT.get())
+                .key('s', Items.STICK)
+                .addCriterion("has_item", hasItem(ItemInit.CROCIUM_INGOT.get()))
+                .build(consumer);
         ShapedRecipeBuilder.shapedRecipe(ArmorInit.CROCS.get(), 1)
                 .patternLine("# #")
                 .patternLine("# #")
