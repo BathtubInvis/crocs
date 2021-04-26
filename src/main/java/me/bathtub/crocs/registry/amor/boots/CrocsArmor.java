@@ -1,7 +1,6 @@
 package me.bathtub.crocs.registry.amor.boots;
 
 import me.bathtub.crocs.Crocs;
-import me.bathtub.crocs.client.renderer.entity.model.ClientReference;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
