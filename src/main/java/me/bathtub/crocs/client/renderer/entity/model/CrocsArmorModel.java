@@ -1,6 +1,3 @@
-// Made with Blockbench 3.8.3
-// Exported for Minecraft version 1.15 - 1.16
-// Paste this class into your mod and generate all required imports
 package me.bathtub.crocs.client.renderer.entity.model;
 
 import net.minecraft.client.renderer.entity.model.BipedModel;

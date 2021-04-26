@@ -1,6 +1,6 @@
 package me.bathtub.crocs;
 
-import me.bathtub.crocs.client.renderer.entity.model.ClientReference;
+import me.bathtub.crocs.client.renderer.entity.model.sidedSystem.ClientReference;
 import me.bathtub.crocs.registry.Registry;
 import me.bathtub.crocs.registry.item.ItemInit;
 import me.bathtub.crocs.world.oreGen.OreGen;

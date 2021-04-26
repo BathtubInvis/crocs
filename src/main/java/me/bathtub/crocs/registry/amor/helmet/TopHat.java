@@ -1,4 +1,4 @@
-package me.bathtub.crocs.registry.amor.boots;
+package me.bathtub.crocs.registry.amor.helmet;
 
 import me.bathtub.crocs.Crocs;
 import net.minecraft.client.renderer.entity.model.BipedModel;
@@ -14,29 +14,19 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
 
-public class CrocsArmor extends ArmorItem {
-    private static int healthBuffer = 0;
-
-    public CrocsArmor(IArmorMaterial materialIn, EquipmentSlotType slot, Properties builderIn) {
+public class TopHat extends ArmorItem {
+    public TopHat(IArmorMaterial materialIn, EquipmentSlotType slot, Properties builderIn) {
         super(materialIn, slot, builderIn);
     }
 
     @Override
     public void onArmorTick(ItemStack stack, World world, PlayerEntity player) {
-        healthBuffer++;
-        if (healthBuffer >= 1200) {
-            healthBuffer = 0;
-            player.addPotionEffect(new EffectInstance(Effects.REGENERATION, 60, 255));
-        } else if (healthBuffer == 60) {
-            if (player.getActivePotionEffect(Effects.REGENERATION).getAmplifier() == 255) {
-                player.removePotionEffect(Effects.REGENERATION);
-            }
-        }
+        player.addPotionEffect(new EffectInstance(Effects.HERO_OF_THE_VILLAGE, 60, 2));
     }
 
     @Nullable
     @Override
     public <A extends BipedModel<?>> A getArmorModel(LivingEntity entityLiving, ItemStack itemStack, EquipmentSlotType armorSlot, A _default) {
-        return Crocs.SIDED_SYSTEM.getCrocsArmorModel(armorSlot);
+        return Crocs.SIDED_SYSTEM.getTopHatArmorModel(armorSlot);
     }
 }

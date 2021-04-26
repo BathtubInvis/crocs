@@ -4,6 +4,7 @@ import me.bathtub.crocs.Crocs;
 import me.bathtub.crocs.registry.item.ItemInit;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
+import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
@@ -14,7 +15,8 @@ import net.minecraftforge.common.util.Lazy;
 import java.util.function.Supplier;
 
 public enum ArmorMaterials implements IArmorMaterial{
-	crocs("crocs", 99999, new int[]{200, 200, 200, 200}, 0, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 999F, 999F, () -> Ingredient.fromItems(ItemInit.CROCIUM_INGOT.get()))
+	crocs("crocs", 99999, new int[]{200, 200, 200, 200}, 0, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 999F, 999F, () -> Ingredient.fromItems(ItemInit.CROCIUM_INGOT.get())),
+	topHat("top_hat", 20000, new int[]{100, 100, 100, 100}, 0, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 999F, 999F, () -> Ingredient.fromItems(Items.GOLD_BLOCK))
 	;
 	
 	private static final int[] MAX_DAMAGE_ARRAY = new int[]{13, 15, 16, 11};
