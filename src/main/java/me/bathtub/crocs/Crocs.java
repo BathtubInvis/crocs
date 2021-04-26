@@ -1,5 +1,6 @@
 package me.bathtub.crocs;
 
+import me.bathtub.crocs.client.renderer.entity.model.ClientReference;
 import me.bathtub.crocs.registry.Registry;
 import me.bathtub.crocs.registry.item.ItemInit;
 import me.bathtub.crocs.world.oreGen.OreGen;
@@ -20,6 +21,7 @@ import org.apache.logging.log4j.Logger;
 public class Crocs {
     public static final String MOD_ID = "crocs";
     private static final Logger LOGGER = LogManager.getLogger();
+    public static final ClientReference SIDED_SYSTEM = new ClientReference();
 
     public Crocs() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
