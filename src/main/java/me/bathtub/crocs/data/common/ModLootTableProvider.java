@@ -43,7 +43,7 @@ public class ModLootTableProvider extends LootTableProvider {
 
         @Override
         protected Iterable<Block> getKnownBlocks() {
-            return BlockInit.BLOCKS.getEntries().stream()
+            return BlockInit.ORES.getEntries().stream()
                     .map(RegistryObject::get)
                     .collect(Collectors.toList());
         }

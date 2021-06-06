@@ -2,6 +2,7 @@ package me.bathtub.crocs.data.common;
 
 import me.bathtub.crocs.Crocs;
 import me.bathtub.crocs.registry.amor.ArmorInit;
+import me.bathtub.crocs.registry.block.BlockInit;
 import me.bathtub.crocs.registry.item.ItemInit;
 import net.minecraft.data.*;
 import net.minecraft.item.Item;
@@ -16,14 +17,13 @@ public class ModRecipeProvider extends RecipeProvider {
         super(generatorIn);
     }
 
-    //it didn't commit so i added this line
     @Override
     protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
-        CookingRecipeBuilder.smeltingRecipe(getIngredientFromItem(ItemInit.CROCIUM_ORE.get()), ItemInit.CROCIUM_INGOT.get(), 0.7f, 200)
-                .addCriterion("has_item", hasItem(ItemInit.CROCIUM_ORE.get()))
+        CookingRecipeBuilder.smeltingRecipe(getIngredientFromItem(BlockInit.CROCIUM_ORE.get().asItem()), ItemInit.CROCIUM_INGOT.get(), 0.7f, 200)
+                .addCriterion("has_item", hasItem(BlockInit.CROCIUM_ORE.get().asItem()))
                 .build(consumer, recipeID("crocium_ingot_smelting"));
-        CookingRecipeBuilder.blastingRecipe(getIngredientFromItem(ItemInit.CROCIUM_ORE.get()), ItemInit.CROCIUM_INGOT.get(), 0.7f, 100)
-                .addCriterion("has_item", hasItem(ItemInit.CROCIUM_ORE.get()))
+        CookingRecipeBuilder.blastingRecipe(getIngredientFromItem(BlockInit.CROCIUM_ORE.get().asItem()), ItemInit.CROCIUM_INGOT.get(), 0.7f, 100)
+                .addCriterion("has_item", hasItem(BlockInit.CROCIUM_ORE.get().asItem()))
                 .build(consumer, recipeID("crocium_ingot_blasting"));
 
         ShapedRecipeBuilder.shapedRecipe(ItemInit.CROCIUM_PICKAXE.get(), 1)

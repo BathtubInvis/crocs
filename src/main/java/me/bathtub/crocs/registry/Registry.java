@@ -8,7 +8,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 public class Registry {
     public static void register(IEventBus bus) {
         ArmorInit.ARMOR.register(bus);
-        BlockInit.BLOCKS.register(bus);
+        BlockInit.ORES.register(bus);
         ItemInit.ITEMS.register(bus);
     }
 }

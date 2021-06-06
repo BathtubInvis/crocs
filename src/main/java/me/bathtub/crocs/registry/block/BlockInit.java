@@ -13,9 +13,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class BlockInit {
+    public static final DeferredRegister<Block> ORES = DeferredRegister.create(ForgeRegistries.BLOCKS, Crocs.MOD_ID);
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Crocs.MOD_ID);
 
-    public static final RegistryObject<OreBlock> CROCIUM_ORE = BLOCKS.register("crocium_ore",
+    public static final RegistryObject<OreBlock> CROCIUM_ORE = ORES.register("crocium_ore",
             () -> new OreBlock(
                     AbstractBlock.Properties.create(Material.IRON, MaterialColor.AIR)
                             .sound(SoundType.STONE)

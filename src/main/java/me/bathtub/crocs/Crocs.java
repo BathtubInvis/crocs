@@ -2,7 +2,7 @@ package me.bathtub.crocs;
 
 import me.bathtub.crocs.client.renderer.entity.model.sidedSystem.ClientReference;
 import me.bathtub.crocs.registry.Registry;
-import me.bathtub.crocs.registry.item.ItemInit;
+import me.bathtub.crocs.registry.block.BlockInit;
 import me.bathtub.crocs.world.oreGen.OreGen;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -42,16 +42,20 @@ public class Crocs {
     }
 
     public static class ItemGroups {
-        public static final ItemGroup MATERIALS = new MATERIALS("materials");
+        public static final ItemGroup MATERIALS = new ItemGroupTemplate("materials", BlockInit.CROCIUM_ORE.get().asItem().getDefaultInstance());
+        public static final ItemGroup BUILDING_BLOCKS = new ItemGroupTemplate("building_blocks", BlockInit.CROCIUM_ORE.get().asItem().getDefaultInstance());
 
-        private static class MATERIALS extends ItemGroup {
-            public MATERIALS(String label) {
+        private static class ItemGroupTemplate extends ItemGroup {
+            private final ItemStack icon;
+
+            public ItemGroupTemplate(String label, ItemStack icon) {
                 super(label);
+                this.icon = icon;
             }
 
             @Override
             public ItemStack createIcon() {
-                return ItemInit.CROCIUM_INGOT.get().getDefaultInstance();
+                return icon;
             }
         }
     }
